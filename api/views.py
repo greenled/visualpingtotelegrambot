@@ -23,7 +23,7 @@ def send_message_to_telegram_bot(request):
                 url=body['url'],
                 description=body['description'],
                 datetime=body['datetime'],
-                preview=body['preview'].replace('/home/rdudler/sites/', ''),
+                preview='https://visualping.io/' + body['preview'].replace('visualping.io', '').replace('home/rdudler/sites', '').replace('///', '').replace('//', ''),
                 change=body['change']
             )
         }
