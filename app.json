@@ -1,0 +1,33 @@
+{
+    "name": "VisualPing to Telegram Bot",
+    "description": "A Telegram bot to get VisualPing updates through webhooks",
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "repository": "https://github.com/greenled/visualpingtotelegrambot",
+    "keywords": [
+        "python",
+        "django",
+        "telegram",
+        "visualping"
+    ],
+    "env": {
+        "SECRET_KEY": {
+            "description": "The secret key for the Django application.",
+            "generator": "secret"
+        },
+        "TELEGRAM_BOT_TOKEN": {
+            "description": "Telegram bot token"
+        },
+        "DEBUG": {
+            "description": "Wether or not to enable debug mode",
+            "value": "False"
+        },
+        "DISABLE_COLLECTSTATIC": {
+            "description": "Disable static assets collection",
+            "value": "1"
+        }
+    }
+}
